@@ -1,0 +1,37 @@
+package com.launchbrowswer;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class web_Java {
+
+	public static void main(String[] args)  {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\exam\\Desktop\\selinium\\chromedriver\\chromedriver.exe ");
+		WebDriver driver = new ChromeDriver();
+		
+		
+		driver.get("https://www.amazon.in/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fgp%2Fcss%2Fhomepage.html%2F%3Fie%3DUTF8%26ref_%3Dnav_em_hd_re_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&ref_%3Dnav_em_hd_clc_signin_0_1_1_39");
+		driver.findElement(By.id("ap_email"));
+		
+		driver.findElement(By.id("ap_email")).sendKeys("patilanuja2405@gmail.com");
+		driver.findElement(By.id("continue")).click();
+		
+		driver.findElement(By.id("ap_password")).sendKeys("Anuja@2405");
+		driver.findElement(By.id("signInSubmit")).click();
+		
+		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Penguin");
+		driver.findElement(By.id("nav-search-submit-button")).click();
+		
+		driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[1]/div/span[1]/div[1]/div[2]/div/div/div/div/span/div/div/div[2]/span/a/div/img")).click();
+		
+		driver.get("https://www.amazon.in/cart/smart-wagon?newItems=dd20c1bc-45c8-4d3d-8cea-4f6a27f342da,1&ref_=sw_refresh");
+		
+		//driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[7]/div[3]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[21]/div[1]/div[1]/span[1]/span[1]/span[1]/a[1]")).click();
+	}
+
+}
+
